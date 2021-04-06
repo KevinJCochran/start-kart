@@ -6,8 +6,8 @@ import (
 	"github.com/digitalocean/godo"
 )
 
-var sshFingerprint = "f7:c5:cb:68:34:87:bd:cd:10:b9:54:9c:36:77:38:17"
-var token = "36e3b0ef06666c2c5b6c034d6503242f1a80e0588bc25b2b4fa3c78184b06431"
+var sshFingerprint = ""
+var token = ""
 
 func main() {
 	client := godo.NewFromToken(token)
