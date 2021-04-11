@@ -63,5 +63,19 @@ else
     curl https://www.nickgirardo.com/hornpack_2021-04-10.pk3 > /usr/games/SRB2Kart/hornpack_2021-04-10.pk3
 fi
 
+
+# Install hitfeed
+if grep -q "addfile kl_hitfeed-v2.2.pk3" /root/.srb2kart/kartserv.cfg; then
+    echo "hitfeed enabled, skipping download"
+else
+    # Appending this mod
+    # It relies on hornmod and must come afterwards
+    echo "addfile kl_hitfeed-v2.2.pk3" >> /root/.srb2kart/kartserv.cfg
+
+    # Download hitfeed.pk3
+    # TODO take as env var?
+    curl https://www.nickgirardo.com/kl_hitfeed-v2.2.pk3 > /usr/games/SRB2Kart/kl_hitfeed-v2.2.pk3
+fi
+
 # Start server
 srb2kart -dedicated
