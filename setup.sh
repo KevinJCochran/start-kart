@@ -51,16 +51,16 @@ fi
 
 # Install hornpack (custom horns for hornmod)
 # TODO maybe check hornmod is installed here as that must happen first?
-if grep -q "addfile hornpack_2021-04-10.pk3" /root/.srb2kart/kartserv.cfg; then
+if grep -q "addfile hornpack-v1.3.pk3" /root/.srb2kart/kartserv.cfg; then
     echo "hornpack enabled, skipping download"
 else
     # Appending this mod
     # It relies on hornmod and must come afterwards
-    echo "addfile hornpack_2021-04-10.pk3" >> /root/.srb2kart/kartserv.cfg
+    echo "addfile hornpack-v1.3.pk3" >> /root/.srb2kart/kartserv.cfg
 
     # Download hornpack.pk3
     # TODO take as env var?
-    curl https://www.nickgirardo.com/hornpack_2021-04-10.pk3 > /usr/games/SRB2Kart/hornpack_2021-04-10.pk3
+    curl https://www.nickgirardo.com/hornpack-v1.3.pk3 > /usr/games/SRB2Kart/hornpack-v1.3.pk3
 fi
 
 
